@@ -1,37 +1,54 @@
+<!--Last Page, Leaderboard wtimes ranked from highest to lowest.-->
 <body>
 
   <header>
-
     <nav>
       <ul class="navbar-list">
-        <li class="navbar-item"><a href="/">Exit</a></li>
+          <!--Here is the nav bar that will eventually be linked back
+        to the homepage. It just needs some styling so it is at the top-->
+        <li  class="navbar-item">
+          <a href="Story Page.html">Exit</a>
+        </li>
+        <li  class="navbar-item">
+          <a href="Story Page.html">Home</a>
+        </li>
+        <li  class="navbar-item">
+          <a href="Story Page.html">About</a>
+        </li>
       </ul>
-    </
-
   </header>
 
   <main>
+      <!--Here is the box where the user can enter their name
+  for now I am going to leave it as a section just in case we need
+to change anything later on -->
       <section>
-        <div class="name">
-        <label for="input-name">Enter Name</label>
-        <input type="text" id="leaderName">
-        <div class="add-score">
-          <button id="score-button">+</button>
-        </div>
+        <div class="name-box">
+        <label for="enter-name">Enter Name</label>
+        <input type="text" id="todo-input-who">
         </div>
       </section>
+        <!--This is where the times and names of player will be shown
+      it should be centered. Right there is just one item hard coded
+    since to implement the leader board I need to work with the others
+  to make it dynamic.-->
       <section>
+        <!-- this text should be bolded and centered-->
         <h1>LeaderBoard Times:</h1>
         <ol>
-          <li type="time">Inez</li>
+          <!--this should left aligned-->
+          <li> Inez-------------------------------1:30</li>
         </ol>
+        <!--this is the reset button, it doesn't work yet since
+        we still need java and so on. So don't worry about anything
+        functioning at this point. But this button should be bellow the
+        list of names and inside the leader board screen. Somewhere near
+        the bottom.-->
+        <div class="reset-game">
+          <button id="reset-button">Reset</button>
+        </div>
       </section>
 
-      <div class="reset-game">
-        <button id="reset-button">+</button>
-      </div>
-
   </main>
-
 
 </body>

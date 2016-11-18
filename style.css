@@ -1,0 +1,28 @@
+/*simple css styling*/
+body {
+  background-color: #89cff0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5em;
+}
+
+
+.navbar-item {
+  list-style-type: none;
+}
+
+.actions {
+  list-style-type: none;
+}
+
+li:link, li:visited {
+    background-color: lightgreen;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+li:hover, li:active {
+    background-color: orange;
+}
