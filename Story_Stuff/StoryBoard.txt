@@ -1,0 +1,107 @@
+Story:
+
+Knight saves the princess:
+
+
+Nodes:
+
+Inn (meet kings scribe)
+Inner Forest (Go through valley or through cavern)
+Outer Forest (Go left or right, bandit)
+Deep Forest (Make it through rival)
+DeepForestFight (Fight your rival!)
+Grove (Meet Hermit Wizard)
+Cavern (Flee from demonic Goat)
+Clearing (Get around dragon)
+Tower (Get through traps)
+Princess room (Reunite!)
+Flee (Flee the tower!)
+Showdown (Stare down the dragon!)
+Dragon fight (Fight the dragon!)
+Dragon talk! (Talk the dragon!)
+Dragon Gamble (Bet the dragon!)
+Epilogue(Decide end with princess)
+
+
+Storyboard:
+
+Format:
+[StoryPositionVariable] | [Basic description of action] | Sucess1: [Sucessful Variable 1] | Sucess2: [Sucessful variable 2] | Sucess3: [Sucessful Variable 3]
+Failure states will be (3 - number of sucess variables). They will be titled as [StoryPositionVariableFail1], [StoryPositionVariableFail2]
+
+Branch(Inn)
+InnMeet1 | Kings scribe asks you for aid | Sucess1: InnMeet2
+InnMeet2 | Kings scribe delights, gives map, start| Sucess1: Travel1
+
+Branch(travel)
+Travel1 | Travel, decide on left or right outer forest | Sucess1: LeftOuterForest1 | Sucess2: RightOuterForest1
+
+Branch (RightOuterForest)
+RightOuterForest1 | Calm stroll! | Sucess1: Grove1
+Grove1 | You meet a wizard! | Sucess1: Grove2
+Grove2 | Wizard ask you to solve a riddle! | Sucess1: Grove3
+Grove3 | Wizard is pleased! Wizard asks you to help him with his studies! | Sucess1: Grove4 | Sucess2: | DeepForest1
+Grove4 | Its a impossible question. What do? | Sucess1: DeepForest1 | Sucess2: Inn1 | Sucess3: Cavern1
+
+Branch (LeftOuterForest)
+LeftOuterForest1 | Bandit attack! Fight/Flee/Talk | Sucess1: InnerForest1 | Sucess2: Travel1
+
+Branch (innerForest)
+InnerForest1 | Valley or Cavern path? | Sucess1: Valley1 | Sucess2: Cavern1
+
+Branch (Cavern)
+Cavern1 | Its dark and spooky, what do? | Sucess1: Cavern2
+Cavern2 | Two tiny red eyes glare at you! | Sucess1: InnerForest1
+
+Branch (Valley)
+Valley1 | Rocks fall! | Sucess1: DeepForest1
+
+Branch (DeepForest)
+DeepForest1 | Its your hated rival, fight! | Sucess1: DeepForestFight1 | Sucess2: Clearing1
+
+Branch (DeepForestFight!)
+DeepForestFight1 | Fight your rival! | Sucess1: DeepForestFight2
+DeepForestFight2 | Fight your rival! | Sucess1: DeepForestFight3
+DeepForestFight3 | Spare your rival? | Sucess1: Clearing1
+
+Branch (ClearingConflict)
+
+Clearing1 | Tower and Dragon! How do you get around? | Sucess1: Clearing2
+Clearing2 | The door is locked! | Sucess2: Tower1
+Tower1 | Your on the first floor, traps! | Sucess1: Tower2
+Tower2 | Your on the second floor, puzzle! | Sucess2: Tower3
+Tower3 | Your on the third floor, dragon eye! | Sucess3: PrincessRoom1
+PrincessRoom1 | Reunited at last! | Sucess1: Flee1
+Flee1 | The dragon is angry, tower is crashing! | Sucess1: Showdown1
+Showdown1 | You stare down the dragon, what do? | Sucess1: DragonFight1 | Sucess2: DragonTalk1 | Sucess3: DragonGamble1
+ 
+Branch ( Fight!)
+
+DragonFight1 | You fight the dragon! | Sucess1: DragonFight2
+DragonFight2 | You fight the dragon! | Sucess1: DragonFight3
+DragonFight3 | You fight the dragon! | Sucess1: DragonFight4
+DragonFight4 | You finish the dragon! | Sucess1: Epilogue1
+Epilogue1 | You save the princess!
+
+Branch (Talk!)
+
+DragonTalk1 | You Talk the dragon! | Sucess1: DragonTalk2
+DragonTalk2 | You Talk the Dragon! | Sucess2: DragonTalk3
+DragonTalk2 | You talk the dragon! | Sucess1: DragonTalk4
+DragonTalk4 | You diplomancer the dragon! | Sucess1: Epilogue1
+Epilogue1 | You save the princess!
+
+Branch (Gamble!)
+DragonGamble1 | You Gamble the Dragon! | Sucess1: DragonGamble2
+DragonGamble2 | You Gamble the Dragon! | Sucess1: Epilogue1
+Epilogue1 | You save the princess!
+
+
+
+Inn:
+
+Its been a hard month for you, Sir Knight. The peasants are happy and hard working, the bandits have been laying low, and there is no crusade to fight for. You spend your last few coins on a pint of ale and give the innkeeper a sad nod of the head.
+
+With a crash the innkeeper doors burst open.
+
+
