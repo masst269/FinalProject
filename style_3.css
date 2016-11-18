@@ -1,0 +1,16 @@
+body {
+  font: 24px;
+  font-family: Arial;
+  background: #000000;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  clear: both;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 10px;
+  width: 100%;
+  background-color: transparent url(http://g01.a.alicdn.com/kf/HTB1thezKpXXXXaRXpXXq6xXFXXXx/send-rolled-8-x8-Old-Gray-font-b-Stone-b-font-font-b-Wall-b-font.jpg;)
+}
