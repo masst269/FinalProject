@@ -1,6 +1,8 @@
 <!--Last Page, Leaderboard wtimes ranked from highest to lowest.-->
 <body>
 
+    <link rel="stylesheet" href="style_3.css" media="screen">
+
   <header>
     <nav>
       <ul class="navbar-list">
@@ -18,37 +20,37 @@
       </ul>
   </header>
 
-  <main>
-      <!--Here is the box where the user can enter their name
-  for now I am going to leave it as a section just in case we need
-to change anything later on -->
+  <main class="parent">
       <section>
-        <div class="name-box">
+        <div class="name">
         <label for="enter-name">Enter Name</label>
         <input type="text" id="todo-input-who">
         </div>
       </section>
-        <!--This is where the times and names of player will be shown
-      it should be centered. Right there is just one item hard coded
-    since to implement the leader board I need to work with the others
-  to make it dynamic.-->
-      <section>
-        <!-- this text should be bolded and centered-->
-        <h1>LeaderBoard Times:</h1>
-        <ol>
-          <!--this should left aligned-->
-          <li> Inez-------------------------------1:30</li>
-        </ol>
-        <!--this is the reset button, it doesn't work yet since
-        we still need java and so on. So don't worry about anything
-        functioning at this point. But this button should be bellow the
-        list of names and inside the leader board screen. Somewhere near
-        the bottom.-->
-        <div class="reset-game">
-          <button id="reset-button">Reset</button>
+      <div class='leaderboard'>
+        <h1><span>Leader Board</span></h1>
+      <div class="content">
+      <ol>
+        <div class="header"> Names <div class="count"> Count</div></div>
+        <li>Olive<div class="count">1:30</div></li>
+        <li>Olaf<div class="count">1:50</div></li>
+        <li>Robin<div class="count">1:60</div></li>
+        <li>Barney<div class="count">1:70</div></li>
+        <li>Chump<div class="count">1:80</div></li>
+        <li>Luke<div class="count">1:90</div></li>
+      </ol>
+      </div>
         </div>
-      </section>
+      <div class="reset-game">
+        <button id="reset-button">Reset</button>
+      </div>
 
   </main>
+
+  <footer>
+    <div class="copyright">
+      Copyright &copy; 2016
+    </div>
+  </footer>
 
 </body>
