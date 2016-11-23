@@ -1,0 +1,83 @@
+<!--Homepage-->
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta  charset="utf-8">
+    <title>The Game - Home</title>
+<!-- linking to the seperate css styling page specific to this html -->
+    <link rel="stylesheet" href="css/style.css" media="screen">
+
+</head>
+
+<body>
+
+  <header>
+<!-- nav bar that links to about, and maybe something else?
+when clicking on the home tab, it should just show that
+it is the current page the user is located on. -->
+    <nav>
+      <ul class="navbar-list">
+        <li class="navbar-item"><a href="/">Home</a></li>
+        <li class="navbar-item"><a href="#">About</a></li>
+        <li class="navbar-item"><a href="#">Something</a></li>
+      </ul>
+    </nav>
+
+</header>
+
+  <main>
+<!-- the main houses only two buttons, start and instructions.
+the instructions button will open up a modal to display
+the instructions. -->
+    <div class="start-button-container">
+      <button id="start-button">Start</button>
+    </div>
+<!-- will open up a dialog page with instructions just
+so that it's just not just a single button floating
+around. -->
+    <div class="info-button-container">
+      <button id="info-button">Instructions</button>
+    </div>
+
+  </main>
+
+<!-- I added a copyright to display at the bottom
+it will have a grey background -->
+  <footer>
+    <div class="copyright">
+      Copyright &copy; 2016
+    </div>
+  </footer>
+
+<!-- This html is to display the instruction information
+I named it info since instructions would be to long
+I also used the previous assignment 2 for guidlines
+on how to name them, but these can be changed. -->
+  <div id="info-backdrop" class="hidden"></div>
+  <div id="info-modal" class="hidden">
+    <div class="info-dialog">
+<!-- header to the information box -->
+      <div class="info-header">
+        <h3> Getting started: </h3>
+        <button type="button" class="info-close-button">&times;</button>
+      </div>
+<!-- where the text will be displayed in paragraph format -->
+      <div class="info-body">
+        <div class="info-element">
+          <p>Some information on the game</p>
+        </div>
+      </div>
+<!-- a footer housing only the 'ok' button that will close the window -->
+      <div class="info-footer">
+        <button type="button" class="info-accept-button">Ok</button>
+      </div>
+
+    </div>
+  </div>
+
+  </body>
+
+<script src="javascript\index.js"></script>
+
+</html>
