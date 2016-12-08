@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta  charset="utf-8">
+    <title>The Game</title>
+
+    <link rel="stylesheet" href="css/Story Page.css" media="screen">
+
+</head>
+
+  <body>
+
+    <header>
+
+      <nav>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="/">Exit</a></li>
+          <li class="navbar-item"><a href="/">hint</a></li>
+        </ul>
+      </nav>
+
+		</header>
+
+    <main>
+
+			<section class="side-picture">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Somov_open-door-garden.jpg/399px-Somov_open-door-garden.jpg">
+      </section>
+
+			<section class="story">
+        <h1>Scene Title</h3>
+				<p>This is the body of the story.</p>
+      </section>
+
+    </main>
+
+    <div>
+      <div class="player-action">
+				<ul class="actions">
+          <li class="action-button"><a href="/">Action A</a></li>
+          <li class="action-button"><a href="#">Action B</a></li>
+					<li class="action-button"><a href="#">Action C</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        Copyright &copy; 2016
+      </div>
+    </footer>
+
+  </body>
+
+  <!-- <script src="index.js"></script> -->
