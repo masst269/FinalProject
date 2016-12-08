@@ -15,7 +15,7 @@ body.main-pages {
   background:transparent url("../images/startpage.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  /*background-size: 100% 100%;*/
+  background-size: 100% 100%;
   height: auto;
 }
 body.scene {
@@ -92,69 +92,6 @@ footer .copyright {
   font-weight: 200;
 }
 
-#info-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
-#info-modal {
-  position: fixed;
-  top: 100;
-  bottom: 100;
-  left: 100;
-  right: 100;
-  background-color: blue;
-}
-
-.hidden {
-  display: none;
-}
-
-
-.modal-dialog {
-  width: auto;
-  max-width: 600px;
-  min-width: 350px;
-  min-height: 300px;
-  margin: 40px auto;
-  background-color: #fff;
-  border-radius: 15px;
-}
-
-.modal-header {
-  position: relative;
-  padding: 10px 20px;
-}
-
-.modal-header h3 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.modal-close-button {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 24px;
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.modal-body {
-  padding: 20px;
-}
-
-.modal-footer .modal-cancel-button:hover {
-  background-color: #eee;
-}
-
 /*This is the styling for the story page buttons
 this is to turn the buttons blue and to make them
 responsive to hovering.*/
@@ -213,4 +150,39 @@ chooses what to do.*/
 .player-action a{
   text-decoration: none;
   color: black;
+}
+
+/*css styling for the modal that pops up upon clicking on instructions on homepage.*/
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#add-note-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-dialog {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 15px;
 }
