@@ -5,7 +5,7 @@
     <meta  charset="utf-8">
     <title>The Game</title>
 
-    <link rel="stylesheet" href="css/Story Page.css" media="screen">
+    <link rel="stylesheet" href="../css/Story Page.css" media="screen">
 
 </head>
 
