@@ -41,6 +41,8 @@
 // }
 // server.listen(port);
 // console.log(" == Listening on port", port);
+//
+//
 
 var express = require('express');
 var path = require('path');
@@ -70,11 +72,12 @@ document.getElementById("start").innerHTML = "Pause";
 document.getElementById("startPause").style.backgroundColor = "red";
 document.getElementById("startPause").style.borderColor = "red";
 }
+}
 // the you win to leaderboadrd should do this
 function pause() {
 if(running == 1){
     running = 0;
-  document.getElementById("").innerHTML = "0:00:00:00"; 
+  document.getElementById("").innerHTML = "0:00:00:00";
 document.getElementById("start").innerHTML = "Resume";
 document.getElementById("startPause").style.backgroundColor = "green";
 document.getElementById("startPause").style.borderColor = "green";
@@ -103,6 +106,7 @@ if(running == 1){
         document.getElementById("output").innerHTML = hours + ":" + mins + ":" + secs + ":" + tenths + "0";
         increment();
     },100)
+}
 }
 
 //Global variable to hold the JSON object
@@ -142,7 +146,7 @@ function setJSON() {
 function getJSON() {
   for (var item in g_objJSON[0]) {
     var list = document.getElementById('box');
-    var firstname = ["Name: " + item + "count: " +  g_objJSON[0][item]);]
+    var firstname = ["Name: " + item + "count: " +  g_objJSON[0][item]];
     var entry = document.createElement('li');
     entry.appendChild(firstname);
     list.appendChild(entry);
@@ -160,11 +164,3 @@ function mergeHashOb(prm_hObj, prm_hObj2) {
   }
   return v_hObj;
 }
-
-
-
-
-
-
-
-//
