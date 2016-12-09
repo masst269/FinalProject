@@ -59,7 +59,107 @@ var server = app.listen(app.get('port'), function (){
   console.log('== Server Running');
 });
 
+var count = 0;
+var running = 0;
+//Start button on Index Page suppose to begin it.
+function start(){
+if(running == 0){
+    running = 1;
+    increment();
+document.getElementById("start").innerHTML = "Pause";
+document.getElementById("startPause").style.backgroundColor = "red";
+document.getElementById("startPause").style.borderColor = "red";
+}
+// the you win to leaderboadrd should do this
+function pause() {
+if(running == 1){
+    running = 0;
+  document.getElementById("").innerHTML = "0:00:00:00"; 
+document.getElementById("start").innerHTML = "Resume";
+document.getElementById("startPause").style.backgroundColor = "green";
+document.getElementById("startPause").style.borderColor = "green";
+};
+}
+//the return home should do this or when you die
+function reset(){
+running = 0;
+count = 0;
+}
 
+function increment(){
+if(running == 1){
+    setTimeout(function(){
+        count++;
+        var mins = Math.floor(time/10/60);
+        var secs = Math.floor(time/10 % 60);
+        var hours = Math.floor(time/10/60/60);
+        var tenths = time % 10;
+        if(mins < 10){
+            mins = "0" + mins;
+        }
+        if(secs < 10){
+            secs = "0" + secs;
+        }
+        document.getElementById("output").innerHTML = hours + ":" + mins + ":" + secs + ":" + tenths + "0";
+        increment();
+    },100)
+}
+
+//Global variable to hold the JSON object
+var g_objJSON;
+
+/** setJSON - Create JSON object
+* Returns - Nothing
+**/
+function setJSON() {
+
+  var v_aJSON = [];
+  var v_hObject = {};
+  var v_hTempHash = {};
+
+  var v_sKey = document.getElementById("name").value;
+  var v_sValue = count;
+
+  try {
+    v_hObject[v_sKey] = v_sValue;
+
+    document.getElementById("name").value = "";
+    document.getElementById("count").value = "";
+
+    if (g_objJSON == undefined) {
+      v_aJSON.push(v_hObject);
+    } else {
+      v_hTempHash = mergeHashOb(g_objJSON[0], v_hObject);
+      v_aJSON.push(v_hTempHash);
+    }
+    g_objJSON = v_aJSON;
+    alert("JSON created!");
+  } catch (x) {
+    alert(x.message);
+  }
+}
+
+function getJSON() {
+  for (var item in g_objJSON[0]) {
+    var list = document.getElementById('box');
+    var firstname = ["Name: " + item + "count: " +  g_objJSON[0][item]);]
+    var entry = document.createElement('li');
+    entry.appendChild(firstname);
+    list.appendChild(entry);
+
+  }
+}
+
+function mergeHashOb(prm_hObj, prm_hObj2) {
+  var v_hObj = {};
+  for (var item in prm_hObj) {
+    v_hObj[item] = prm_hObj[item];
+  }
+  for (var item in prm_hObj2) {
+    v_hObj[item] = prm_hObj2[item];
+  }
+  return v_hObj;
+}
 
 
 
