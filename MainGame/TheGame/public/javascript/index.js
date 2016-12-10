@@ -1,9 +1,42 @@
+var close = document.getElementsByClassName('dismiss-button');
+var i;
+for (i = 0; i < close.length; i++) {
+close[i].addEventListener('click', closeNote) }
+
+function closeNote(event){
+var closeClick = event.currentTarget;
+
+if (closeClick.classList.contains("dismiss-button"))
+closeClick.parentNode.remove();
+}
+
+var cancel = document.getElementsByClassName("modal-cancel-button");
+//closing the window and backdrop with the cancel button
+for (i = 0; i < cancel.length; i++) {
+  cancel[i].onclick = function() {
+    modal.style.display = "none";
+    backdrop.style.display = "none";
+  }
+}
+
+var button = document.getElementsByClassName("modal-close-button")
+//closing the window using the x button
+for (i = 0; i < button.length; i++) {
+  button[i].onclick = function() {
+    modal.style.display = "none";
+    backdrop.style.display = "none";
+  }
+}
+
+
+
+
 //The dialog
 var modal = document.getElementById("add-note-modal");
 //including the backdrop for functions
 var backdrop = document.getElementById("modal-backdrop");
 //activating the instruction button
-  var btn = document.getElementById("add-note-button");
+var btn = document.getElementById("add-note-button");
 
 // btn.addEventListener("click", function() {
 //   modal.style.display = "block";
