@@ -2,15 +2,12 @@
 body {
   margin:0;
   padding:0;
-  /*background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: auto;
-  background-color:#000000;*/
   font-family: "Times New Roman", Times, serif;
   font-size: 1.5em;
   color: silver;
 }
+
+/*styleing the background of homepage, about, 404 etc.*/
 body.main-pages {
   background:transparent url("../images/startpage.jpg");
   background-position: top center;
@@ -18,6 +15,8 @@ body.main-pages {
   background-size: 100% 100%;
   height: auto;
 }
+
+/*styling the pages for the game scenes*/
 body.scene {
   background:transparent url("../images/died.jpg");
   background-position: top center;
@@ -33,6 +32,7 @@ main {
   min-height: 300px;
 }
 
+/*styling the buttons on the homepage*/
 #info-button, #start-button {
   width: 220px;
   height: 64px;
@@ -60,6 +60,8 @@ nav {
   margin-top: -25px;
 }
 
+/*the nav bar is being styled in a single manner to
+help keep a clean look*/
 .navbar-list .navbar-item {
   background-color: #999966;
   display: inline-block;
@@ -92,6 +94,7 @@ footer .copyright {
   font-weight: 200;
 }
 
+/*this is the styling for our modals*/
 #info-backdrop {
   position: fixed;
   top: 0;
