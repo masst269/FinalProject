@@ -20,15 +20,15 @@ btn.addEventListener("click", function() {
 var startBtn = document.getElementById('start-button');
 var infoBtn = document.getElementById('info-button');
 
-startBtn.addEventListener('click', startGame);
-
-
-function startGame(event){
-
-  console.log("Clicked = " + event);
-  //.open('../html/end.html');
-
-};
+// startBtn.addEventListener('click', startGame);
+//
+//
+// function startGame(event){
+//
+//   console.log("Clicked = " + event);
+//   //.open('../html/end.html');
+//
+// };
 
 function displayModal() {
 
