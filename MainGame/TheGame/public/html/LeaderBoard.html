@@ -1,48 +1,63 @@
 <!--Last Page, Leaderboard wtimes ranked from highest to lowest.-->
-<body>
+<!DOCTYPE html>
+<html>
 
     <link rel="stylesheet" href="../css/style_3.css" media="screen">//file not in css
 
-  <header>
     <nav>
       <ul class="navbar-list">
         <li  class="navbar-item">
-          <a href="../index.html">Exit</a>
+          <a href="/index.html">Exit</a>
         </li>
         <li  class="navbar-item">
-          <a href="../index.html">Home</a>
+          <a href="/index.html">Home</a>
         </li>
-  </header>
 
   <main class="parent">
-    <body>
-      Name:&nbsp;<input type="text" id="name"></input><br>
-  <input type="button" id="btnSsetJSON" onclick="setJSON();" value="Create JSON"></input>
-  <input type="button" id="btnRetrieveJSON" onclick="getJSON();" value="Retrieve JSON"></input><br><br>
-</body>
-    <div class="input-container">
-      <label for="box-content-input">Content</label>
-      <input type="text" id="boxContentInput">
-    </div>
         <h1><span>Leader Board</span></h1>
-      <div class="contents">
-        <section class="box-container">
-      <ol class = "box">
-        <div class="names"> Names <div class="counts"> Count</div></div>
-        <li id ="firstname">Olive<div class="count">1:30</div></li>
-      </ol>
-      </div>
-        </div>
-      <div class="reset-game">
-        <button id="reset-button">Reset</button>
+      <div id="box">
+        <h2 id="name1">Name: <div id="time2"> Time: </div> </h2>
+        <ul>
+          <li id="name1">Name: <div id="time2"> Time: </div> </li>
+        </ul>
       </div>
 
   </main>
+  <div class="button-container">
+    <button id="add-note">+</button>
+  </div>
 
-  <footer>
-    <div class="copyright">
-      Copyright &copy; 2016
+<footer>
+  <div class="copyright">
+    Copyright &copy; 2016
+  </div>
+</footer>
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="modal" class="hidden">
+  <div class="modal-dialog">
+
+    <div class="modal-header">
+      <h3>Add a LeaderBoard Entry</h3>
+      <button type="button" class="modal-close-button">&times;</button>
     </div>
-  </footer>
 
-</body>
+    <div class="modal-body">
+      <div class="todo-input-element required">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="modal-cancel-button">Cancel</button>
+      <button type="button" class="modal-accept-button">Add</button>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="index.js"></script>
+
+</html>
