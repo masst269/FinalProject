@@ -34,8 +34,8 @@
       </div>
 
   </main>
-  <div class="button-container">
-    <button id="add-note">+</button>
+  <div class="add-note-button-container">
+    <button id="add-note-button">+</button>
   </div>
 
 <footer>
@@ -45,7 +45,7 @@
 </footer>
 
 <div id="modal-backdrop" class="hidden"></div>
-<div id="modal" class="hidden">
+<div id="add-note-modal" class="hidden">
   <div class="modal-dialog">
 
     <div class="modal-header">
@@ -56,7 +56,8 @@
     <div class="modal-body">
       <div class="todo-input-element required">
         <label for="name">Name</label>
-        <input type="text" id="name">
+        <!-- <input type="text" id="name"> -->
+        <textarea id="name"></textarea>
       </div>
     </div>
 
@@ -70,4 +71,4 @@
 
 </body>
 
-<script src="index.js"></script>
+<script src="../javascript/index.js"></script>

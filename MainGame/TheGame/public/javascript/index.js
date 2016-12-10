@@ -1,11 +1,18 @@
 //The dialog
-var modal = document.getElementById("info-dialog");
+var modal = document.getElementById("add-note-modal");
 //including the backdrop for functions
-var backdrop = document.getElementById("info-backdrop");
+var backdrop = document.getElementById("modal-backdrop");
 //activating the instruction button
-var btn = document.getElementById("info-button");
+  var btn = document.getElementById("add-note-button");
 
+// btn.addEventListener("click", function() {
+//   modal.style.display = "block";
+//   backdrop.style.display = "block";
+// });
+
+// When the user clicks on the button, open the modal
 btn.addEventListener("click", function() {
+  // document.getElementById('todo-input-details').value = "";
   modal.style.display = "block";
   backdrop.style.display = "block";
 });
@@ -104,8 +111,6 @@ function insertNewTodo() {
 
 }
 
-
-
   var addNoteButtonElem = document.getElementById('add-name');
   addNoteButtonElem.addEventListener('click', displayAddNoteModal);
 
@@ -117,5 +122,3 @@ function insertNewTodo() {
 
   var modalAcceptButton = document.querySelector('#modal .modal-accept');
   modalAcceptButton.addEventListener('click', insertNewTodo);
-
-});
